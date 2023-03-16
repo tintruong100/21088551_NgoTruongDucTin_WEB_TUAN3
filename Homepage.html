@@ -9,6 +9,8 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
         
         #wrapper {
@@ -23,7 +25,6 @@
             justify-content: space-around;
             background-color: white;
             width: 1440px;
-            ;
         }
         
         #left_menu {
@@ -47,8 +48,12 @@
         #banner {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            height: 620px;
         }
-        
+        #banner img{
+            width: 1440px;
+        }
         #banner h1 {
             color: #303541;
             font-size: 49px;
@@ -64,12 +69,11 @@
         
         #banner div {
             display: flex;
-            position: absolute;
-            margin-top: 180px;
-            margin-left: 150px;
+            position: relative;
             width: 400px;
             flex-direction: column;
-            align-items: left;
+            top: -420px;
+            left: -400px;
         }
         
         #banner button {
@@ -80,20 +84,23 @@
             padding-right: 20px;
             color: white;
             border-radius: 5px;
-            border-color: #469D7A;
+            border: none;
             width: 40%;
             font-size: 20px;
+
         }
 
         #filter {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         #item_head{
             color: #303541;
             font-size: 49px;
             text-align: center;
+            margin-top: 100px;
         }
 
         #product_tag{
@@ -140,6 +147,80 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        #item_best_seller {
+            background-color: #FFCC72;
+            font-size: 14px;
+            color: #99660C;
+            padding: 10px;
+            width: fit-content;
+            border-radius: 20px;
+            position: relative;
+            top: -435px;
+            left: 175px;
+        }
+        #event_head{
+            color: #303541;
+            font-size: 49px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #event_promotion img{
+            width: 570px;
+            height: 340px;
+            border-radius: 10px;
+        }
+        
+        #event_promotion p {
+            text-align: justify;
+            font-size: 20px;
+            color: #4F4E54;
+        }
+        #event_promotion {
+            display: flex;
+            width: 1200px;
+            justify-content: space-around;
+            height: 340px;
+        }
+        
+        #event_promotion h1 {
+            color: #303541;
+            margin-bottom: 0px;
+        }
+        #event_promotion button {
+            background-color: #469D7A;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            width: fit-content;
+            font-size: 14px;
+        }
+        .event_content div {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: left;
+            top: -280px;
+            left: 30px;
+        } 
+        #see_all{
+            position: relative;
+            top: -70px;
+            left: 550px;
+            color: #459D79;
+        }
+        #story_head{
+            color: #303541;
+            font-size: 49px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #story_img{
+            width: 1440px;
+        }
     </style>
 </head>
 
@@ -161,23 +242,23 @@
                 <img src="img/user.png" alt="user">
             </div>
         </div>
-        <div id="banner">
+    </div>
+    <div id="banner">
             <img src="img/banner.png" alt="">
             <div>
                 <h1>Gift for your skin</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vitae!</p>
                 <button>Shop  now</button>
             </div>
-
-        </div>
-        <div id="filter">
+    </div>
+    <div id="filter">
             <h1 id="item_head">Our product</h1>
             <div id="product_tag">
                 <div id="best_seller">Best seller</div>
                 <div id="new_item">New product</div>
             </div>
             <div id="item">
-                <div id="item1">
+                <div id="item1" class="item">
                     <img src="img/Image 1.png" alt="">
                     <h3>Product title</h3>
                     <p>Labore sint ipsum dolore mollit</p>
@@ -188,48 +269,74 @@
                         </div>
                         <img src="img/Button 1.png" alt="">
                     </div>
+                    <div id="item_best_seller">Best-seller</div>
                 </div>
-                <div id="item2">
+                <div id="item2" class="item">
                     <img src="img/Image 1 (1).png" alt="">
                     <h3>Product title</h3>
                     <p>Labore sint ipsum dolore mollit</p>
                     <div id="coast">
                         <div>
-                            <h1>&#36;32</h1>
-                            <h4>&#36;42</h4>
+                            <h1>&#36;22</h1>
+                            <h4>&#36;28</h4>
                         </div>
                         <img src="img/Button 1.png" alt="">
                     </div>
+                    <div id="item_best_seller">Best-seller</div>
                 </div>
-                <div id="item3">
+                <div id="item3" class="item">
                     <img src="img/Image 1 (2).png" alt="">
                     <h3>Product title</h3>
                     <p>Labore sint ipsum dolore mollit</p>
                     <div id="coast">
                         <div>
-                            <h1>&#36;32</h1>
-                            <h4>&#36;42</h4>
+                            <h1>&#36;18</h1>
+                            <h4>&#36;26</h4>
                         </div>
                         <img src="img/Button 1.png" alt="">
                     </div>
+                    <div id="item_best_seller">Best-seller</div>
                 </div>
-                <div id="item4">
+                <div id="item4" class="item">
                     <img src="img/Image 1 (3).png" alt="">
                     <h3>Product title</h3>
                     <p>Labore sint ipsum dolore mollit</p>
                     <div id="coast">
                         <div>
-                            <h1>&#36;32</h1>
-                            <h4>&#36;42</h4>
+                            <h1>&#36;48</h1>
+                            <h4>&#36;56</h4>
                         </div>
                         <img src="img/Button 1.png" alt="">
                     </div>
+                    <div id="item_best_seller">Best-seller</div>
                 </div>
             </div>
-        </div>
-        <div id="lineitem">lineitem</div>
-        <div id="footer">footer</div>
+            <h1 id="event_head">Event Promotion</h1>
+            <div id="see_all">See all</div>
+            <div id="event_promotion">
+                <div class="event_content">
+                    <img src="img/Image 1 (4).png" alt="">
+                    <div>
+                        <h1>Relaxing &<br>Pampering</h1>
+                        <p>Pariatur ad nisi ex tempor<br>ea dolor</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+                <div class="event_content">
+                    <img src="img/Image 1 (5).png" alt="">
+                    <div>
+                        <h1>Smooth &<br>Bright Skin</h1>
+                        <p>Pariatur ad nisi ex tempor<br>ea dolor</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+            <h1 id="story_head">Our Story</h1>
+            <div id="see_all">See all</div>
+            <img id="story_img" src="img/Image 1 (6).png" alt="">
     </div>
+    <div id="lineitem">lineitem</div>
+    <div id="footer">footer</div>
 </body>
 
 </html>
